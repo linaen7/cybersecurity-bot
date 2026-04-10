@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CyberSecurityBot</title>
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<style>
+
+/* GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background:  #beeab7;
+  color: #222;
+}
+
+/* TITLE */
+h1 {
+  font-size: 70px;
+ color:rgb(247, 255, 158) ;
+ text-align: center;
+ animation: glow 2.5s infinite alternate;
+}
+@keyframes glow { from { text-shadow: 0 0 10px #f4740b; } to { text-shadow: 0 0 25px rgb(5, 225, 130), 0 0 40px #ff4081;}
+}
+/* GLASS PANEL */
+.content {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #00f0ff;
+  border-radius: 15px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 15px #00f0ff55;
+  transition: 0.3s;
+}
+
+.content:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px #00f0ff;
+}
+
+/* SUBTITLE */
+h2 {
+  color: #00bcd4;
+  text-shadow: 0 0 6px #00bcd4;
+}
+
+/* TEXT */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* CHATBOT */
+df-messenger {
+  --df-messenger-chat-window-height: 500px;
+  --df-messenger-chat-window-width: 350px;
+  --df-messenger-bot-message: #00bcd4;
+  --df-messenger-user-message: #eaa845;
+  --df-messenger-button-titlebar-color: #00bcd4;
+  --df-messenger-font-color: #222;
+}
+body{  
+ background-image: url("plufow-le-studio-5Q6yZN8ckuY-unsplash.jpg");
+ background-size: cover; 
+ background-position: center; 
+ background-repeat: no-repeat; 
+
+}
+</style>
+</head>
+
+<body>
+
+<h1>CYBER SECURITY BOT</h1>
+
+<div class="content">
+  <h2>System Information 🤖</h2>
+
+  <p>
+    Ce chatbot a été conçu pour aider les utilisateurs à comprendre les concepts de la cybersécurité, identifier les menaces en ligne et apprendre à se protéger sur Internet.
+  </p>
+
+  <p>
+    <br>Cliquez sur l’icône du chatbot en bas à droite pour démarrer une conversation.
+  </p>
+</div>
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="CyberSecurityBot"
+  agent-id="67d77502-b962-4430-90cf-7e577b53e62c"
+  language-code="en"
+></df-messenger>
+
+</body>
+</html>
