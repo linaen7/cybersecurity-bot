@@ -3,6 +3,9 @@
 <head>
   <title>CyberSecurityBot</title>
 
+  <!-- ✅ IMPORTANT FOR MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
 <style>
@@ -11,19 +14,36 @@
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
-  background:  #beeab7;
+  background: #beeab7;
   color: #222;
+
+  background-image: url("plufow-le-studio-5Q6yZN8ckuY-unsplash.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 /* TITLE */
 h1 {
   font-size: 70px;
- color:rgb(247, 255, 158) ;
- text-align: center;
- animation: glow 2.5s infinite alternate;
+  color: rgb(247, 255, 158);
+  text-align: center;
+  animation: glow 2.5s infinite alternate;
 }
-@keyframes glow { from { text-shadow: 0 0 10px #f4740b; } to { text-shadow: 0 0 25px rgb(5, 225, 130), 0 0 40px #ff4081;}
+
+/* ✅ FIX: responsive title */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+    padding: 0 10px;
+  }
 }
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #f4740b; }
+  to { text-shadow: 0 0 25px rgb(5, 225, 130), 0 0 40px #ff4081; }
+}
+
 /* GLASS PANEL */
 .content {
   max-width: 600px;
@@ -35,9 +55,12 @@ h1 {
   border-radius: 15px;
 
   backdrop-filter: blur(12px);
-
   box-shadow: 0 0 15px #00f0ff55;
   transition: 0.3s;
+
+  /* ✅ FIX: mobile spacing */
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .content:hover {
@@ -66,13 +89,15 @@ df-messenger {
   --df-messenger-button-titlebar-color: #00bcd4;
   --df-messenger-font-color: #222;
 }
-body{  
- background-image: url("plufow-le-studio-5Q6yZN8ckuY-unsplash.jpg");
- background-size: cover; 
- background-position: center; 
- background-repeat: no-repeat; 
 
+/* ✅ FIX: mobile chatbot */
+@media (max-width: 600px) {
+  df-messenger {
+    --df-messenger-chat-window-width: 100%;
+    --df-messenger-chat-window-height: 70vh;
+  }
 }
+
 </style>
 </head>
 
