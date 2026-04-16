@@ -2,15 +2,13 @@
 <html>
 <head>
   <title>CyberSecurityBot</title>
-
-  <!-- ✅ IMPORTANT FOR MOBILE -->
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
 <style>
 
-/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
@@ -23,7 +21,7 @@ body {
   background-repeat: no-repeat; 
 }
 
-/* TITLE */
+/* le titre */
 h1 {
   font-size: 70px;
   color: rgb(247, 255, 158);
@@ -31,7 +29,6 @@ h1 {
   animation: glow 2.5s infinite alternate;
 }
 
-/* ✅ FIX: responsive title */
 @media (max-width: 600px) {
   h1 {
     font-size: 32px;
@@ -44,7 +41,6 @@ h1 {
   to { text-shadow: 0 0 25px rgb(5, 225, 130), 0 0 40px #ff4081; }
 }
 
-/* GLASS PANEL */
 .content {
   max-width: 600px;
   margin: 60px auto;
@@ -57,30 +53,29 @@ h1 {
   backdrop-filter: blur(12px);
   box-shadow: 0 0 15px #00f0ff55;
   transition: 0.3s;
-
-  /* ✅ FIX: mobile spacing */
-  width: 90%;
+ width: 100%;
+  min-height: 95vh;
   box-sizing: border-box;
 }
-
+ 
 .content:hover {
   transform: scale(1.02);
   box-shadow: 0 0 25px #00f0ff;
 }
 
-/* SUBTITLE */
+
 h2 {
   color: #00bcd4;
   text-shadow: 0 0 6px #00bcd4;
 }
 
-/* TEXT */
+/* TEXT du tableau */
 p {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.6;
 }
 
-/* CHATBOT */
+/* le chat */
 df-messenger {
   --df-messenger-chat-window-height: 500px;
   --df-messenger-chat-window-width: 350px;
@@ -90,7 +85,6 @@ df-messenger {
   --df-messenger-font-color: #222;
 }
 
-/* ✅ FIX: mobile chatbot */
 @media (max-width: 600px) {
   df-messenger {
     --df-messenger-chat-window-width: 100%;
